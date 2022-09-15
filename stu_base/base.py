@@ -59,3 +59,57 @@ print(len(a))
 b = a * 3
 print(b) # (1, 2, 3, 1, 2, 3, 1, 2, 3)
 
+# 字典：键值对
+# 实例化定义
+dic = dict()
+# 定义
+dic = {"name":"admin","pwd":"123456"}
+# 新增
+dic["sex"] = "女"
+print(dic)
+# 删除
+dic.pop("sex")
+# 查询
+print(dic.get("name"))
+# 遍历字典的key
+for key in dic.keys():
+    print(key)
+# 遍历字典的value
+for value in dic.values():
+    print(value)
+# 遍历字典的value和key
+for k,v in dic.items():
+    print(f"key={k} value={v}")
+# 字典切片
+# 数据[起始索引:结束索引:步长]
+name = "abcdefg"
+print(name[2:5:1])
+# 键值对个数
+print(len(name))
+
+
+# 函数
+# 定义
+def hello():
+    print("hello")
+# 调用
+hello()
+# 传参
+def get_max(x,y):
+    if x>y:
+        return x
+    else:
+        return y
+print(get_max(5,6))
+# 缺省函数
+def print_info(name,gender="女生"):
+    print(f"{name}是{gender}")
+print_info("dd")
+# 多参函数
+def demo(num, *args):
+    print(num)
+    print(args)
+demo(1,2,3,4,5)
+# 匿名函数
+sum = lambda arg1,arg2:arg1 + arg2
+print(sum(10,20))
