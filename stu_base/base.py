@@ -148,3 +148,13 @@ with open('data.json',encoding='utf8') as f:
 param = {'name':'tom','age':20}
 with open('data2.json','w',encoding='utf8') as f:
     json.dump(param,f)
+
+# json转为字典
+ss = '{"mobile_phone":"18600001112","pwd":"123456789","type":1,"reg_name":"美丽可爱的小简","flag":null}'
+ss_dict = json.loads(ss)
+print(ss_dict)
+
+# 字典转为json
+dict_ss = {'mobile_phone': '18600001112', 'pwd': '123456789', 'type': 1, 'reg_name': '美丽可爱的小简', 'flag': None}
+ss_json = json.dumps(dict_ss,ensure_ascii=False)
+print(ss_json)
